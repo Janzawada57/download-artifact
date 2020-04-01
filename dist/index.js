@@ -1836,9 +1836,9 @@ class DownloadHttpClient {
                     core_1.debug(`Http request has finished for ${artifactLocation}, will now try to process to ${downloadPath}`);
                     // Always read the body of the response. There is potential for a resource leak if the body is not read which will
                     // result in the connection remaining open along with unintended consequences when trying to dispose of the client
-                    const body = yield response.readBody();
-                    console.log("this is the original body");
-                    console.log(body);
+                    // const body = yield response.readBody();
+                    // console.log("this is the original body");
+                    // console.log(body);
                     //tempStream.write(response.message)
                     //tempStream.end()
                     if (utils_1.isSuccessStatusCode(response.message.statusCode)) {
